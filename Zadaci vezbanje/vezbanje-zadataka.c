@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+
+ #define PI 3.14
 int main(){
     //  1
 
@@ -97,11 +99,70 @@ int main(){
 //  printf("Realni kolicnik a/b je: %f\n", (float)a/(float)b); 
 //  printf("Ostatak pri deljenju a/b je: %d\n", a%b);
 
-    // 8
+    // 8 2.17. Саставити програм који за унете странице правоугаоника исписује његов обим и површину. 
 
+    // float a,b,o,p;
+    // printf("unesite stranicu a: ");
+    // scanf("%f",&a);
+    // printf("unesite stranicu b: ");
+    // scanf("%f",&b);
+    // o = 2*a + 2*b;
+    // p = a*b;
+    // printf("obim je : %.2f",o);
+    // printf("povrsina je : %.2f",p);
 
+    // 9  Саставити програм који за унети полупречник круга исписује његов обим и површину
+
+    // float r,obim,povrsina;
+   
     
+    // printf("unesite poluprecnik kruga: ");
+    // scanf("%f", &r);
+    // obim = 2*r*PI;
+    // povrsina = r*r*PI;
+    // printf("obim kruga je : %.2f", obim);
+    // printf("povrsina kruga je : %.2f", povrsina);
 
+    //10 2.21. Саставити програм за решавање линеарне једначине AX+B=0, где се коефицијенти А и В
+    // уносе са тастатуре (А≠0)
+
+    // float a,x,b;
+    // printf("a = ");
+    // scanf("%f",&a);
+    // printf("b = ");
+    // scanf("%f",&b);
+    // x = -b/a;
+    // printf("Jednacina ima oblik %.2fX + %.2f = 0\n", a, b); 
+    // printf("Resenje X= %.2f\n", x); 
+
+    //11 2.22. Саставити програм за рачунање израза 2 3
+    // y = x + x + x за унету вредност х. 
+
+    // float x,y;
+
+    // printf("unesite x: ");
+    // scanf("%f",&x);
+    // y = sqrt(x+x*x+x*x*x);
+    // printf("y = %.2f",y);
+
+    //12 2.23. Саставити програм који исписује вредност модула комплексног броја z = a + bi за унете
+    // вредности а и b. Модул се рачуна по формули 2 2
+    // z = a + b .
+
+    // float a, b, m; 
+    // printf("a= "); 
+    // scanf("%f",&a); 
+    // printf("b= "); 
+    // scanf("%f",&b); 
+    // m=sqrt(a*a+b*b); 
+    // printf("Modul kompleksnog broja %.2f+%.2f i je %.2f ", a, b, m); 
+
+    //13 2.24. Саставити програм који за унете реалне и имагинарне делове два комплексна броја исписује
+    // та да два броја у облику z = a + bi 1
+    // и z = c + di 2
+    // , а затим рачуна њихов збир и разлику
+    // ( ) ( ) z1 ± z2 = a + c ± i b + d . 
+    
 
     return 0 ;
 }
