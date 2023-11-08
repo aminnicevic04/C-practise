@@ -103,6 +103,52 @@ int main() {
     // printf("\n%d", C); //for int
     // printf("\n%lf", H); // for double
 
+    // 8 if
+    // int age=10;
+
+    // printf("\nEnter ur age: ");
+    // scanf("%d", &age);
+
+    // if(age > 18){
+    //     printf("u are now singed up!");
+    // }else if(age == 0){
+    //     printf("u cant sign up u are just born");
+    // }
+    // else if(age < 0){
+    //     printf("u havent been born yet.");
+    // }
+    // else {
+    //     printf("ur not signed up yet.");
+    // }
+
+    // 9 switch   
+
+    //  char grade;
+
+    // printf("\nEnter a letter grade: ");
+    // scanf("%c", &grade); 
+
+    // switch(grade){
+    //     case 'A':
+    //         printf("Perfect\n");
+    //         break;
+    //     case 'B':
+    //         printf("you did it good\n");
+    //         break;
+    //     case 'C':
+    //     printf("u did it okay\n");
+    //         break;
+    //     case 'D':
+    //         printf("at least its not an F\n");
+    //         break;
+    //     case 'F':
+    //         printf("u failed\n");
+    //         break;
+    //     default:
+    //         printf("Invalid grade");
+    // }
+
+    // }
 
 
 
