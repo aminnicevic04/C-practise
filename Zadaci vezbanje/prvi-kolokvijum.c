@@ -337,26 +337,27 @@ int main(){
     //3. ZADATAK 2 list
   // ispisati program kojim se izracunava: S=1! +3! + 5! n mora biti neparan broj u suprotnom je s=0
 
-  int n, f = 1;
-  float s = 0;
-  printf("n: ");
-  scanf("%d", &n);
+//   int n, f = 1;
+//   float s = 0;
+//   printf("n: ");
+//   scanf("%d", &n);
   
-  if(n%2 != 0){
-  for (int i = 1; i <= n; i += 2)
-  {
-    f = 1;
-    for (int j = 1; j <= i; j++)
-    {
-      f *= j;
-    }
-    s += f;
-  }
-  } else {
-    s = 0;
-  }
-  printf("%.2f\n ", s);
+//   if(n%2 != 0){
+//   for (int i = 1; i <= n; i += 2)
+//   {
+//     f = 1;
+//     for (int j = 1; j <= i; j++)
+//     {
+//       f *= j;
+//     }
+//     s += f;
+//   }
+//   } else {
+//     s = 0;
+//   }
+//   printf("%.2f\n ", s);
 
- 
-    return 0 ;
+
+
+    return 0;
 }
