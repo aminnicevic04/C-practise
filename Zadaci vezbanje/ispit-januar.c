@@ -203,24 +203,109 @@ main(){
 // 2.30. Саставити програм који одређује и исписује број степени, минута и секунди у углу који је
 // задат у радијанима. 
 
-double x;
-int stepen,minut,sekund;
+// double x;
+// int stepen,minut,sekund;
 
-printf("unesite ugao u radijanima: ");
-scanf("%lf", &x);
+// printf("unesite ugao u radijanima: ");
+// scanf("%lf", &x);
 
-x*=180/PI; //konvertujem u stepene
-stepen = (int)x; //zaokruzivanje broja stepeni
-x-=stepen; //izracunavanje koliko delova stepena je ostaalo
+// x*=180/PI; //konvertujem u stepene
+// stepen = (int)x; //zaokruzivanje broja stepeni
+// x-=stepen; //izracunavanje koliko delova stepena je ostaalo
 
-x*=60; //izracunavanje  broja minuta
-minut = (int)x; //zaokruzivanje
-x -= minut; //izracunavanje koliko delova minuta je ostalo
+// x*=60; //izracunavanje  broja minuta
+// minut = (int)x; //zaokruzivanje
+// x -= minut; //izracunavanje koliko delova minuta je ostalo
 
-x*=60; //izracunavanje broja stepeni
-sekund = (int)x; //zaokruzivanje
+// x*=60; //izracunavanje broja stepeni
+// sekund = (int)x; //zaokruzivanje
 
-printf("\nstepena, minuta, sekundi [%d,%d,%d]\n", stepen, minut, sekund);
+// printf("\nstepena, minuta, sekundi [%d,%d,%d]\n", stepen, minut, sekund);
+
+//sta ispisuje sledeci block koda
+
+//  int a = 3, b = 3;
+//  printf("\n a b \n");
+//  printf("\n %d %d\n", a--, --b);
+//  printf("\n %d% d\n", a--, --b);
+//  printf("\n %d% d\n\n", a--, --b);
+
+
+// 3.1
+
+// int broj;
+// printf("unesite broj: \n");
+// scanf("%d", &broj);
+
+// if(broj % 2 == 0)
+// printf("broj je paran");
+// else
+// printf("broj je neparan");
+
+// 3.2. Сас
+
+// int a;
+// printf("unesite ceo broj: ");
+// scanf("%d", &a);
+
+// if(a > 0){
+//     printf("broj je pozitivan");
+// }else if(a < 0){
+//     printf("broj je negativan");
+// }else{
+//     printf("vas broj je 0");
+// };
+
+//nacin dva
+
+// int a;
+// printf("unesite ceo broj: "); scanf("%d", &a);
+// if(a == 0){
+//     printf("vas broj je 0");
+// } else
+// (a > 0) ? printf("broj je pozitivan") : ("broj je negativan");
+
+// 3.3. Саставити програм који за два унета цела броја исписује какав постоји релациони однос
+// између њих (једнаки су, први већи од другог или први је мањи од другог). 
+
+// int a,b;
+
+// printf("unesite broj A: \n");
+// scanf("%d", &a);
+// printf("unesite broj B: \n");
+// scanf("%d", &b);
+
+// if(a==b){
+//     printf("brojevi su jednaki");
+// } else 
+// (a > b ) ? printf("broj A je veci od broja B") : printf("broj B je veci od broja A");
+
+// 3.4. Саставити програм који за три унета цела броја исписује највећи. 
+
+// int a,b,c,max;
+
+// printf("unesite tri broja: ");
+// scanf("%d %d %d", &a,&b,&c);
+// max = a;
+// if(b > max){
+//     max = b;
+// } 
+// if(c > max){
+//     max = c;
+// }
+
+// printf("najveci broj je %d", max);
+
+// 3.5. Саставити програм који три унета реална броја уређује у неопадајућем редоследу. 
+
+// double x,y,z;
+
+// printf("unesite tri realna broja: ");
+// scanf("%lf%lf%lf",&x,&y,&z);
+
+// if(x > y){
+//     p=x
+// }
 
  getche();
  return 0;
