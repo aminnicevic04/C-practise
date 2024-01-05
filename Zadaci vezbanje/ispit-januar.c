@@ -298,14 +298,270 @@ main(){
 
 // 3.5. Саставити програм који три унета реална броја уређује у неопадајућем редоследу. 
 
-// double x,y,z;
+// double x,y,z,prvi,drugi,treci;
 
 // printf("unesite tri realna broja: ");
 // scanf("%lf%lf%lf",&x,&y,&z);
 
-// if(x > y){
-//     p=x
+// if(x < y && x < z){
+//     prvi = x; 
+//     if(y < z){
+//         drugi = y;
+//         treci = z;
+//     } else{
+//         drugi = z;
+//         treci = y;
+//     }
 // }
+// if(y < x && y < z){
+//     prvi = y;
+//     if(z < x){
+//         drugi = z;
+//         treci = x;
+//     } else{
+//         drugi = x;
+//         treci = z;
+//     }
+// }
+// if(z < x && z < y){
+//     prvi = z;
+//     if(x < y){
+//         drugi = x;
+//         treci = y;
+//     } else{
+//         drugi = y;
+//         treci = x;
+//     }
+// }
+
+// printf("1) %.2lf \n", prvi);
+// printf("2) %.2lf \n", drugi);
+// printf("3) %.2lf \n", treci);
+
+//nacin 2
+
+// double x, y, z, p;
+//  printf("Unesite tri realna broja: ");
+//  scanf("%lf%lf%lf", &x, &y, &z);
+//  if(x>y)
+//  {
+//  p=x; x=y; y=p;
+//  }
+//  if(x>z)
+//  {
+//  p=x; x=z; z=p;
+//  }
+//  if(y>z)
+//  {
+//  p=y; y=z; z=p;
+//  }
+//  printf("Uredjeni brojevi: %.2f %.2f %.2f\n", x, y, z); 
+
+// 3.6. Саставити програм који проверава и исписује да ли се на k-том месту унетог броја n налази
+// бит који има вредност 1 или 0. 
+
+// int n,k, bit;
+
+// printf("unesite broj n: ");
+// scanf("%d",&n);
+// printf("unesite poziciju tog broja koju zelite da proverite: ");
+// scanf("%d",&k);
+
+// bit = (n << k) & 1; // << jeste operator koji pomera u bitove u desno za k mesta
+
+// printf("na %d-tom mestu u broju %d se nalazi bit sa vrednoscu: %d", k,n,bit);
+
+//nacin 2
+
+    // int n, k;
+
+    // printf("Unesite broj: ");
+    // scanf("%d", &n);
+
+    // printf("Unesite poziciju tog broja koju želite da proverite: ");
+    // scanf("%d", &k);
+
+    // if ((n & (1 << k)) != 0)
+    //     printf("Bit na poziciji %d je 1\n", k);
+    // else
+    //     printf("Bit na poziciji %d je 0\n", k);
+
+// 3.7. Саставити програм који ће на основу унетих броја поена (од нула до 100) исписати
+// одговарајућу оцену (0-50 пет, 51-60 шест, 61-70 седам, 71-80 осам, 81-90 девет, 91-100 десет). 
+
+// int a;
+
+//     printf("Unesite broj bodova: ");
+//     scanf ("%d", &a);
+
+//  if (a>90)
+//  printf("Ocena je 10\n");
+//  else if (a>80)
+//  printf("Ocena je 9\n");
+//  else if (a>70)
+//  printf("Ocena je 8\n");
+//  else if (a>60)
+//  printf ("Ocena je 7\n");
+//  else if (a>50)
+//  printf("Ocena je 6\n");
+//  else
+//  printf("Ocena je 5\n"); 
+
+// 3.8. Саставити програм који ће за унети опсег позитивних целих бројева од а до b исписати да ли
+// се у задатом опсегу налази квадрат броја х (број х се уноси са тастатуре). 
+
+// int a,b,x;
+
+// printf("unesite opseg brojeva <pocetak> <kraj> : ");
+// scanf("%d%d",&a,&b);
+// printf("unesite treci broj koji proveravamo: ");
+// scanf("%d",&x);
+
+// if(a < x*x && b > x*x){
+//     printf("broj postoji u opsegu \n");
+// }else{
+//     printf("broj ne postoji u zadatom opsegu");
+// }
+
+// 3.9. Саставити програм који ће учитати два броја и од већег одузети мањи и приказати резултат. 
+
+// int a,b,rez;
+
+// printf("unesite broj a i b, unoseci prvo a: ");
+// scanf("%d%d",&a,&b);
+
+// if(a>b){
+//     rez = a - b;
+//     printf("rezulat je : %d",rez);
+// }else{
+//     rez = b - a;
+//     printf("broj a je manji od b i ne mogu se oduzeti");
+// }
+
+// 3.10. Саставити програм за одређивање сигнум функције и исписивање резултата за унети реалан
+// број х.
+//       -1 , x<0
+// sgn( ) 0 , x=0
+//        1 , x>0
+
+// float x;
+// int y;
+
+// printf("unesite broj x: ");
+// scanf("%d",&x);
+
+// if(x==0){
+//     y = 0;
+// }else if(x > 0){
+//     y = 1;
+// }else{
+//     y = -1;
+// }
+// printf("y = %d",y);
+
+// 3.11. Саставити програм за израчунавање функције у за унето х. Функција у је дефинисана на
+// следећи начин:
+// 2 , -2< 2
+// 3 1, 5 7
+// 1/ , ostalo
+
+// float x,y;
+// printf("unesite x: ");
+// scanf("%f",&x);
+
+// if(x > -2 && x <= 2){
+//     y = 2*x;
+// }else if(x >= 5 && x < 7){
+//     y = 3*x - 1;
+// }else {
+//     y = 1 / x;
+// }
+
+// printf("y: %.2f",y);
+
+
+// 3.12. Саставити програм за израчунавање функције z за унето х и y. Функција z је дефинисана на
+// следећи начин:
+// 2 2
+// min( , ), 0
+// max( , ), 0
+
+// int x,y,z;
+// printf("unesite x i y, unoseci prvo x: ");
+// scanf("%d%d",&x,&y);
+
+// if(y > 0){
+//     if(x < y){
+//         z = x;
+//     } else{
+//         z = y;
+//     }
+// }else {
+//     if(x*x < y*y ){
+//         z = y*y;
+//     }else{
+//         z = x*x;
+//     }
+// }
+// printf("z: %.d",z);
+
+// 3.13. Саставити програм који исписује обавештење да ли унете променљиве а, b и c које
+// означавају дужине страница формирају троугао. Уколико формирају троугао израчунати површину
+// троугла користeћи следеће формуле:
+// 2
+// a b c S
+// + +
+// = , P S S a S b S c = − − − ( )( )( ) .
+
+// int a,b,c,p,s;
+// printf("unesite duzine stranica a, b i c: \n");
+// scanf("%d%d%d",&a,&b,&c);
+
+// if(a+b>c && b+c>a && a+c>b){
+//     s = (a+b+c)/2;
+//     p = sqrt(s*(s-a)*(s-b)*(s-c));
+//     printf("Stranice a b i c formiraju trougao povrsine %d",p);
+// }else printf("Date stranice a b i c ne formiraju trougao");
+
+// 3.13. Саставити програм који исписује обавештење да ли унете променљиве а, b и c које
+// означавају дужине страница формирају троугао. Уколико формирају троугао израчунати површину
+// троугла користeћи следеће формуле:
+// 2
+// a b c S
+// + +
+// = , P S S a S b S c = − − − ( )( )( ) .
+
+ double xa, ya, xb, yb, xc, yc, a, b, c, alfa, beta, gama;
+ printf("Unesite koordinate tacke A(x,y): ");
+ scanf("%lf%lf",&xa,&ya);
+ printf("Unesite koordinate tacke B(x,y): ");
+ scanf("%lf%lf",&xb,&yb);
+ printf("Unesite koordinate tacke C(x,y): ");
+ scanf("%lf%lf",&xc,&yc);
+
+ a = sqrt(pow(xb-xc,2) + pow(yb-yc,2));
+ b = sqrt(pow(xa-xc,2) + pow(ya-yc,2));
+ c = sqrt(pow(xa-xb,2) + pow(ya-yb,2)); 
+
+printf("\nStranice:\n");
+ printf("a= %.2f\n", a);
+ printf("b= %.2f\n", b);
+ printf("c= %.2f\n", c);
+
+ if(a+b>c && a+c>b && b+c>a){
+    alfa = acos((b*b+c*c-a*a) / (2*b*c));
+    beta = acos((c*c+a*a-b*b) / (2*c*a));
+    gama = acos((a*a+b*b-c*c) / (2*a*b));
+
+    alfa *= 180/PI;
+    beta *= 180/PI;
+    gama *= 180/PI;
+
+    printf("\nUglovi:\n");
+    printf("Alfa = %.2f stepeni \n",alfa );
+    printf("Beta = %.2f stepeni \n",beta );
+    printf("Gama = %.2f stepeni \n",gama );
+ }else printf("od datih koordinata ne mozemo napraviti trougao");
 
  getche();
  return 0;
