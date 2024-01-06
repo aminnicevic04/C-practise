@@ -531,37 +531,209 @@ main(){
 // + +
 // = , P S S a S b S c = − − − ( )( )( ) .
 
- double xa, ya, xb, yb, xc, yc, a, b, c, alfa, beta, gama;
- printf("Unesite koordinate tacke A(x,y): ");
- scanf("%lf%lf",&xa,&ya);
- printf("Unesite koordinate tacke B(x,y): ");
- scanf("%lf%lf",&xb,&yb);
- printf("Unesite koordinate tacke C(x,y): ");
- scanf("%lf%lf",&xc,&yc);
+//  double xa, ya, xb, yb, xc, yc, a, b, c, alfa, beta, gama;
+//  printf("Unesite koordinate tacke A(x,y): ");
+//  scanf("%lf%lf",&xa,&ya);
+//  printf("Unesite koordinate tacke B(x,y): ");
+//  scanf("%lf%lf",&xb,&yb);
+//  printf("Unesite koordinate tacke C(x,y): ");
+//  scanf("%lf%lf",&xc,&yc);
 
- a = sqrt(pow(xb-xc,2) + pow(yb-yc,2));
- b = sqrt(pow(xa-xc,2) + pow(ya-yc,2));
- c = sqrt(pow(xa-xb,2) + pow(ya-yb,2)); 
+//  a = sqrt(pow(xb-xc,2) + pow(yb-yc,2));
+//  b = sqrt(pow(xa-xc,2) + pow(ya-yc,2));
+//  c = sqrt(pow(xa-xb,2) + pow(ya-yb,2)); 
 
-printf("\nStranice:\n");
- printf("a= %.2f\n", a);
- printf("b= %.2f\n", b);
- printf("c= %.2f\n", c);
+// printf("\nStranice:\n");
+//  printf("a= %.2f\n", a);
+//  printf("b= %.2f\n", b);
+//  printf("c= %.2f\n", c);
 
- if(a+b>c && a+c>b && b+c>a){
-    alfa = acos((b*b+c*c-a*a) / (2*b*c));
-    beta = acos((c*c+a*a-b*b) / (2*c*a));
-    gama = acos((a*a+b*b-c*c) / (2*a*b));
+//  if(a+b>c && a+c>b && b+c>a){
+//     alfa = acos((b*b+c*c-a*a) / (2*b*c));
+//     beta = acos((c*c+a*a-b*b) / (2*c*a));
+//     gama = acos((a*a+b*b-c*c) / (2*a*b));
 
-    alfa *= 180/PI;
-    beta *= 180/PI;
-    gama *= 180/PI;
+//     alfa *= 180/PI;
+//     beta *= 180/PI;
+//     gama *= 180/PI;
 
-    printf("\nUglovi:\n");
-    printf("Alfa = %.2f stepeni \n",alfa );
-    printf("Beta = %.2f stepeni \n",beta );
-    printf("Gama = %.2f stepeni \n",gama );
- }else printf("od datih koordinata ne mozemo napraviti trougao");
+//     printf("\nUglovi:\n");
+//     printf("Alfa = %.2f stepeni \n",alfa );
+//     printf("Beta = %.2f stepeni \n",beta );
+//     printf("Gama = %.2f stepeni \n",gama );
+//  }else printf("od datih koordinata ne mozemo napraviti trougao");
+
+// 3.15. Саставити програм којим се испитује да ли се секу праве 1 1 y a x b = ⋅ + и 2 2 y a x b = ⋅ + . Ако
+// се секу одредити координате пресека. Коефицијенти а1, b1, a2 и b2 се уносе са тастатуре
+
+// double a1,a2,b1,b2,x,y;
+
+// printf("Unesite koeficijente:\na1= "); scanf("%lf", &a1);
+//  printf("b1= "); scanf("%lf", &b1);
+//  printf("a2= "); scanf("%lf", &a2);
+//  printf("b2= "); scanf("%lf", &b2); 
+
+//  printf("\nPrave:\ny=%.2fx+%.2f\ny=%.2fx+%.2f\n", a1, b1, a2, b2); 
+
+
+// if(a1==a2){
+//     if(b1==b2){
+//         printf("Prave se podudaraju");
+//     }else{
+//         printf("Prave se podudaraju");
+//     }
+// }else{
+//     x=(b2-b1)/(a1-a2);
+//     y=a1*x+b1; 
+//     printf("\nTacka preseka je x= %.2f, y= %.2f\n", x, y);
+// }
+
+// 3.16. Саставити програм којим се решава нелинеарна једначина a x b ⋅ + ↔ 0 где је ↔ знак < или >,
+// и а≠0. Коефицијенти а и b и знак се уносе са тастатуре. 
+
+// char z;
+// double a,b,x;
+
+// printf("Unesite znak [<,>]: "); scanf("%c", &z); 
+// printf("unesite koeficijente \na = "); scanf("%lf",&a);
+// printf("b = "); scanf("%lf",&b);
+// printf("\n nejednacina ima oblik %.2lfx + %.2lf %c 0\n",a,b,z);
+
+// x = -b/a;
+
+// if(a>0){
+//     printf("resenje je x %c %.2f",z,x);
+// }else{
+//     printf("resnje je %.2f %c x",z,x);
+// }
+
+
+// 3.17. Саставити програм за решавање система од две линеарне једначине: 1 1 1 a x b y c + = и
+// 2 2 2 a x b y c + = . Коефицијенти a1, a2, b1, b2, c1 и c2 се уносе са тастатуре. За решавање система
+// користити методу детерминанти: 1 1
+// 1 2 2 1
+// 2 2
+// a b
+// D a b a b
+// a b
+// = = − ,
+// 1 1
+// 1 2 2 1
+// 2 2
+// x
+// c b
+// D c b c b
+// c b
+// = = − и
+// 1 1
+// 1 2 2 1
+// 2 2
+// y
+// a c
+// D a c a c
+// a c
+// = = − .
+// Систем има три решења:
+// 1) D ≠ 0:
+// ,
+// Dx
+// Dy
+// x y
+// D D
+// = =
+// 2) 0: D D D = = = x y
+//  неодређено (бесконачно решења)
+// 3) остали случајеви: нема решења. 
+
+// double a1, b1, c1, a2, b2, c2, D, Dx, Dy, x, y;
+
+// printf ("Unesite koeficijente prve jednacine:\na1= ");
+// scanf("%lf", &a1);
+// printf("b1= "); scanf("%lf", &b1);
+// printf("c1= "); scanf("%lf", &c1);
+
+// printf("Unesite koeficijente druge jednacine:\na2= ");
+// scanf("%lf", &a2);
+// printf("b2= "); scanf("%lf", &b2);
+// printf("c2= "); scanf("%lf", &c2); 
+
+// D = a1 * b2 - a2 * b1;
+// Dx = c1 * b2 - c2 * b1;
+// Dy = a1 * c2 - a2 * c1; 
+
+// if(D != 0){
+//     x = Dx/D;
+//     y = Dy/D;
+//     printf ("\nResenje sistema:\nx= %.2f\n", x); 
+//     printf ("y= %.2f\n", y); 
+// }else 
+// if(Dx==0 && Dy==0)
+//     printf("Ima beskonacno resenja");
+// else{
+//     printf("Nema resenja");
+// }
+
+// 3.18. Саставити програм за решавање квадратне једначине 2
+// ax bx c + + = 0. У зависности од
+// коефицијента а и дискриминанте 2 D b ac = − 4 имамо следећа решења:
+// 1) а≠0 и D>0: два различита и реална ( 1,2 2
+// b d
+// x
+// a
+// − ±
+// = ),
+// 2) а≠0 и D=0: два једнака реална ( 1,2 2
+// b
+// x
+// a
+// −
+// = ),
+// 3) а≠0 и D<0: два коњуговано комплексна (
+// 1,2 2
+// b i d
+// x
+// a
+// − ±
+// = ),
+// 4) а=0 и b≠0: линеарна једначиина, решење ( c
+// x
+// b
+// −
+// = ),
+// 5) а=0 и b=0: нема решења. 
+
+// double a,b,c,x1,x2,D;
+
+// printf("Unesite koeficijente:\na= ");
+//     scanf("%lf", &a);
+//     printf("b= ");
+//     scanf("%lf", &b);
+//     printf("c= ");
+//     scanf("%lf", &c);
+
+//     if (a != 0) {
+//         D = b * b - 4 * a * c;
+
+//         if (D > 0) {
+//             x1 = (-b + sqrt(D)) / (2 * a);
+//             x2 = (-b - sqrt(D)) / (2 * a);
+//             printf("Resenja:\nx1=%.2f, x2=%.2f\n", x1, x2);
+//         } else if (D == 0) {
+//             x1 = -b / (2 * a);
+//             printf("Resenje:\nx1=x2=%.2f\n", x1);
+//         } else {
+//             x1 = -b / (2 * a);
+//             x2 = sqrt(fabs(-D)) / (2 * a);
+//             printf("Kompleksna resenja:\nx1=%.2f+i%.2f, x2=%.2f-i%.2f\n", x1, x2, x1, x2);
+//         }
+//     } else {
+//         if (b != 0) {
+//             x1 = -c / b;
+//             printf("Resenje:\nx=%.2f\n", x1);
+//         } else {
+//             printf("Sistem nema resenja.\n");
+//         }
+//     }
 
  getche();
  return 0;
