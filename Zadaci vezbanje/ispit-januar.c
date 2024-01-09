@@ -735,6 +735,128 @@ main(){
 //         }
 //     }
 
+// 4.1. Саставити програм који ће пет пута исписати реченицу Pozdrav svima! употребом FOR
+// петље. 
+
+    // int i;
+
+    // for(i=1; i<=5; i++){
+    //     printf("pozdrav svima \n");
+    // }
+
+//     4.2. Саставити програм који употребом FOR петље исписује:
+// а) све бројеве прве десетице,
+// б) само непарне бројеве прве десетице
+// в) све бројеве прве десетице у обрнутом редоследу. 
+
+    // int i;
+    // a)
+    // for(i=1; i<=10; i++){
+    //     printf("%d\n",i);
+    // }
+    // b)
+    // for(i=1; i<=10; i=i+2){
+    //     printf("%d\n",i);
+    // }
+    // c)
+    // for(i=10; i>=1; i--){
+    //     printf("%d\n",i);
+    // }
+
+//     4.3. Које вредности i и j имају након сваке промене унутар FOR петље у следећем програмском
+// коду: 
+
+// int i, j;
+//     for(i=1; i<3; i++)
+//         for(j=1; j<4; j++)
+//             printf("i=%d, j=%d\n", i, j);
+//             printf("\n");
+//     for(i=1; i<4; i++)
+//         for(j=1; j<3; j++)
+//             printf("i=%d, j=%d\n", i, j); 
+
+// 4.4. Саставити програм који за унето n исписује збир првих n целих позитивних бројева. 
+
+// int n,z,i;
+
+// printf("unesite broj n: ");
+// scanf("%d",&n);
+// z=0;
+// for(i=1; i<=n; i++){
+//     z = z + i;  
+// }
+// printf("%d",z);
+
+// 4.5. Саставити програм који за унето n учитава n реалних бројева и приказује њихов збир и
+// аритметичку средину.
+
+//sam ucitava n realnih brojeva
+// int i,n,aritmeticka,z;
+// printf("unesite broj n:");
+// scanf("%d",&n);
+// z=0;
+// for(i=1; i<=n; i++){
+//     z+=i;
+// }
+// aritmeticka = z / n;
+// printf("aritmeticka sredina = %d\nzbir = %d",aritmeticka,z);
+
+// //korisnik da unese n realnih brojeva
+//  int n, i;
+//  float a, s, ars;
+//  s=0;
+//  printf("n= ");
+//  scanf("%d",&n);
+//  printf(" Unesite %d brojeva:\n", n);
+//     for(i=1; i<=n; i++){ 
+//         scanf("%f",&a);
+//         s+=a;
+//     }
+//  ars=s/n;
+//  printf("\n Suma zadatih brojeva je %.2f", s);
+//  printf("\n Aritmeticka sredina zadatih brojeva je %.2f", ars); 
+
+// 4.6. Саставити програм који за унети цео број n приказује његов факторијел. 
+// int i,n;
+// long faktorijel = 1;
+// printf("unesite broj n: ");
+// scanf("%d",&n);
+
+// for(i=1; i<=n; i++)
+//     faktorijel = faktorijel * i;
+// printf("faktorijel broja %d je %ld",n,faktorijel);
+
+// 4.7. Саставити програм којим се за унети природан број n израчунава суму: S n = + + + + 1! 2! 3! ... !. 
+
+// int i,n;
+//  long f=1, s=0;
+//  printf("n= ");
+//  scanf("%d",&n);
+//  for(i=1; i<=n; i++){
+//     f*=i;
+//     s+=f;
+//  }
+//  printf("\ns= %ld\n", s); 
+
+// 4.8. Саставити програм којим се, за дате природне бројеве m и n, израчунава израз:
+// а)... b)...
+
+// int m,n,i;
+// long s;
+
+// printf("n= ");
+//  scanf("%d",&n);
+//  printf("m= ");
+//  scanf("%d",&m); 
+
+// s=1;
+// for(i=0;i<=m;i++){
+//     s=s*(n+i*m);
+// }
+// printf("\ns= %ld\n",s);
+// b)
+
+
  getche();
  return 0;
 }
