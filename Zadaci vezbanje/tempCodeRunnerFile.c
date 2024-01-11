@@ -1,1 +1,1 @@
-    printf("Resenje X= %.2f\n", x); 
+c == b+2

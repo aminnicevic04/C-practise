@@ -7,7 +7,7 @@
 
  #define PI 3.141592
 
-main(){ 
+int main(){ 
 
     // 2.19. Саставити програм који за унети полупречник основице и висине ваљка исписује његову
 // површину и запремину. (Површина: P=2*r*π*(r+h) , Запремина: V=r2
@@ -853,11 +853,274 @@ main(){
 // for(i=0;i<=m;i++){
 //     s=s*(n+i*m);
 // }
-// printf("\ns= %ld\n",s);
+//  printf("\ns= %ld\n", s); 
+
+// 4.9. Саставити програм којим се, за дати природни n израчунава израз: 
+// a)
+ 
+//  int i, n, fakt;
+//  float s, q;
+//  printf("n= ");
+//  scanf("%d",&n);
+//  s=0;
+//  q=0;
+//  fakt=1;
+//  for(i=1; i<=n; i++)
+//  {
+//  fakt=fakt*i;
+//  q=q+1./(1+i);
+//  s=s+fakt/q;
+//  }
+//  printf("\ns= %.5f\n", s);
+
 // b)
+// int i,n,fakt,znak;
+// float s,q;
+
+// printf("unesite broj n: ");
+// scanf("%d",&n);
+
+// s=0;
+// q=0;
+// fakt=1;
+// znak=1;
+
+// for(i=1;i<=n;i++){
+//     fakt = fakt*i;
+//     q = q+i;
+//     s = s + znak * q / (float) fakt;
+//     znak = - znak;
+// }
+// printf("\ns = %.5f\n",s);
+
+// c)
+// int i,n;
+// float s,p,q;
+
+// printf("unesite broj n: ");
+// scanf("%d", &n);
+
+// s=1;
+// q=0;
+// p=0;
+
+// for(i=1;i<=n;i++){
+//     p = p + cos(i);
+//     q = q + sin(i);
+//     s = s * p / (float)q;
+// }
+//  printf("\ns= %.5f\n", s); 
+
+// 4.10. Саставити програм којим се, за дати природни број n и реалан број х, израчунава израз:
+// а) 
+// int i,n;
+// float p,s,x;
+
+// printf("Unesite broj n: ");
+// scanf("%d",&n);
+// printf("Unesite broj x: ");
+// scanf("%f",&x);
+
+// s=0;
+// p=1;
+// for(i=1;i<=n;i++){
+//     p = p * sin(x);
+//     s = s + p;
+// }
+// printf("s = %.5f",s);
+
+// б)
+// int i,n;
+// float p,s,x;
+
+// printf("n= ");
+//  scanf("%d",&n);
+//  printf("x= ");
+//  scanf("%f",&x); 
+
+// s=0;
+// p=1;
+
+// for(i=1;i<=n;i++){
+//     p = p * x;
+//     s = s + cos(p);
+// }
+
+// printf("s = %.5f",s);
+
+// 4.11. Саставити програм којим се, за дати природни број n, израчунава израз:
+
+// int i,n;
+// float s,p;
+// printf("unesite broj n: ");
+// scanf("%d",&n);
+
+// s=1;
+// p=0;
+// for(i=1;i<=n;i++){
+//     p = sqrt(p+2);
+//     s = s / p;
+// }
+// printf("s = %.5f",s);
+
+// 4.12. Саставити програм који ће учитати n реалних бројева и исписати највећи. 
+// int i,n;
+// float br,max;
+
+// printf("Unesite broj realnih clanova niza: \n");
+// scanf("%d",&n);
+// printf("unesite broj 1. : \n");
+// scanf("%f",&br);
+
+// max = br;
+// for(i=2;i<=n;i++){
+//     printf("unesite %d. broj: ",i);
+//     scanf("%f",&br);
+
+//     if(br>max){
+//         max = br;
+//     }
+// }
+// printf("najveci broj je %.2f",max);
 
 
- getche();
+// 4.13. Саставити програм који ће исписати све бројева прве стотине који су дељиви са 6 и њихову
+// суму. 
+
+// int i,s;
+
+// s = 0;
+// for(i=1;i<=100;i++){
+//     if(i%6 == 0){
+//         s = s + i;
+//         printf("%d\n",i);
+//     }
+// }
+//     printf("suma brojeva deljivih sa 6 je %d",s);
+
+// 4.14. Саставити програм који исписује све троцифрене бројеве код којих је друга цифра за 2 већа
+// од прве, а трећа за 1 већа од друге. 
+
+// int a,b,c,i;
+// for(i=100;i<=999;i++){
+//     a = i / 100;//prva cifra
+//     b = (i / 10) % 10;//druga cifra
+//     c = i % 10;//treca cifra
+
+//     if ((b == a + 2) && (c == b + 1)) {
+//         printf("%d\n", i);
+//         }
+// }
+
+//nacin 2
+// int a,b,c;
+
+// for(a = 1;a<=9;a++)
+//     for(b = 3; b <= 9;b++)
+//         for(c = 4; c <= 9;c++){
+//             if(b == a+2 && c == a+1){
+//                 printf("%d%d%d\n",a,b,c);
+//             }
+//         }
+
+// 4.15. Саставити програм којим се исписују сви троцифрени Амстронгови бројеви. Троцифрени
+// број је Амстронгов ако је једнак збиру кубова својих цифара. 
+// int a,b,c,broj;
+// printf("amstrongovi brojevi: \n");
+
+// for(a = 1; a<=9; a++)
+//     for(b = 0; b<=9; b++)
+//         for(c = 0; c<=9; c++){
+//             broj = a*100+b*10+c;
+//             if(broj == pow(a,3)+pow(b,3)+pow(c,3))
+//             pritnf("\n %d",broj);
+//         }
+
+// 4.16. Саставити програм којим се исписују сви троцифрени бројеви АВС који имају својство
+//  (АВС)= (АВ)
+// 2
+// -С
+// 2
+// , где су непознате цифре 1 9 ≤ ≤ A , 0 9 ≤ ≤ B , 0 9 ≤ ≤ C . На пример: 147=142
+// -72
+// . 
+
+// int a,b,c,broj;
+// for(a = 1; a<=9; a++)
+//     for(b=0; b<=9; b++)
+//         for(c=0; c<=9; c++){
+//             broj = a*100 + b*10 + c;
+//             if(broj == ((10*a+b)*(10*a+b)-c*c))
+//             printf("\n%d",broj);
+//         }
+        
+//  4.17. Саставити програм којим се исписују сви троцифрени бројеви који имају особину да су
+// дељиви бројем који се добија избацивањем средње цифре. 
+
+// int a,b,c,broj,dvocifreni;
+
+// for(a=1; a<=9; a++)
+//     for(b=0; b<=9; b++) 
+//         for(c=0; c<=9; c++){
+//             broj = a*100+b*10+c;
+//             dvocifreni= a*10+c;
+//             if(broj % dvocifreni == 0){
+//                 printf("%d ",broj);
+//             }
+//         }
+
+// 4.18. Саставити програм који рачуна суму троцифрених природних бројева чији је збир цифара
+// једнак 5. Исписати и обавештење колико бројева има такву особину. 
+
+// int a,b,c,brojac,broj,s;
+// s=0;
+// brojac=0;
+// for(a=1; a<=9; a++)
+//     for(b=0; b<9; b++)
+//         for(c=0; c<9; c++){
+//             broj = a*100 + b*10 + c;
+//             if(a + b + c == 5){
+//                 brojac++;
+//                 s += broj;
+//             }
+//         }
+
+//         printf("Suma: %d\n",s);
+//         printf("Ukupno brojeva: %d\n",brojac);
+
+// 4.19. Саставити програм који ће исписати све делиоце унетог броја n. 
+// int n,i;
+// printf("unesite broj n: ");
+// scanf("%d",&n);
+
+// printf("Delioci broja %d su: \n",n);
+
+// for(i=1;i<=n;i++){
+//     if(n%i == 0){
+//         printf("\n%d",i);
+//     }
+// }
+
+// 4.20. Саставити програм који ће исписати обавештење да ли је унети број n савршен. Број је
+// савршен ако је једнак суми својих делиоца искључујући њега самог. На пример, 28=1+2+4+7+14. 
+
+int i,n,s;
+s=0;
+printf("unesite broj n: ");
+scanf("%d",&n);
+
+for(i = 1; i<n; i++){
+    if(n%i==0){
+        s += i;
+    }
+}
+    if(n==s){
+        printf("Broj %d jeste savrsen broj\n",n);
+    }else{
+        printf("Broj %d nije savrsen broj\n",n);
+    }
+
+ getchar();
  return 0;
 }
 
