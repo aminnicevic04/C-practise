@@ -1104,23 +1104,242 @@ int main(){
 // 4.20. Саставити програм који ће исписати обавештење да ли је унети број n савршен. Број је
 // савршен ако је једнак суми својих делиоца искључујући њега самог. На пример, 28=1+2+4+7+14. 
 
-int i,n,s;
-s=0;
-printf("unesite broj n: ");
-scanf("%d",&n);
+// int i,n,s;
+// s=0;
+// printf("unesite broj n: ");
+// scanf("%d",&n);
 
-for(i = 1; i<n; i++){
-    if(n%i==0){
-        s += i;
+// for(i = 1; i<n; i++){
+//     if(n%i==0){
+//         s += i;
+//     }
+// }
+//     if(n==s){
+//         printf("Broj %d jeste savrsen broj\n",n);
+//     }else{
+//         printf("Broj %d nije savrsen broj\n",n);
+//     }
+
+// 4.21. Саставити програм који ће учитати оцене за n ученика и исписати просечну оцену свих
+// ученика и број ученика који имају оцену 1.
+
+// int n,i,ocena,negativnih;
+// float suma,srednja;
+// printf("Koliko vase odeljenje ima ucenika ?");
+// scanf("%d",&n);
+
+// negativnih = 0;
+
+// for(i=1;i<=n;i++){
+//     printf("Unesite ocenu ucenika #%d:\n",i);
+//     scanf("%d",&ocena);
+//     suma += ocena;
+//     if(ocena == 1) {
+//         negativnih++;
+//     }
+// }
+//     srednja = suma / n;
+//     printf("Prosek datih ocena je %.2f\n", srednja);
+//     printf("Broj negativnih ocena je %d",negativnih);
+
+// 4.22. Електронски сат показује време у сатима, минутима и секундама. Саставити програм који ће
+// исписати све моменте времена у току једног дана такве да је сума цифара на сату једнака датом броју
+// n. Испис треба да је у облику (n=33):
+// 0 sat 11 min 31 sec
+// 1 sat 32 min 0 sec . 
+
+// int sec,min,sat,n;
+
+// printf("n = ");
+// scanf("%d",&n);
+
+// for(sat = 0; sat <=23; sat++)
+//     for(min = 0; min <= 59; min++)
+//         for(sec = 0; sec <= 59; sec++){
+//             if(n == (sat/10+sat%10 + min/10+min%10 + sec/10+sec%10)){
+//                 printf("%d sat %d min %d sec \n",sat,min,sec);
+//             }
+//         }
+        //zadatk je ispravan tj.isto je kao u zbirci ali ne radi na vece brojeve iz razloga
+        // sto ima preterano veliki broj itreacija for petlje i kod mora da se optimizuje.
+
+// 4.23. Саставити програм за табелирање функције ...
+
+// double xmin,xmax,dx,x,y;
+// printf("xmax = ");
+// scanf("%lf",&xmax);
+// printf("xmin = ");
+// scanf("%lf",&xmin);
+// printf("dx = ");
+// scanf("%lf",&dx);
+
+// for(x = xmin; x <= xmax; x+=dx){
+//     y = (2*x+1) / (x*x-1);
+//     printf("%10.3f%10.3f\n", x,y);
+// }
+
+// 4.24. Саставити програм за табелирање функције ...
+// до xmax са кораком dx. Степен функције n се уноси са тастатуре.
+
+// int i,n;
+// double xmax,xmin,dx,x,y,p;
+
+// p = 1;
+// y = 1;
+
+// printf("n = ");
+// scanf("%d",&n);
+// printf("xmin = ");
+// scanf("%lf",&xmin);
+// printf("xmax = ");
+// scanf("%lf",&xmax);
+// printf("dx = ");
+// scanf("%lf",&dx);
+
+// for(x = xmin; x <= xmax; x+=dx){
+//     for(i = 1; i<=n; i++){
+//         p *= x;
+//         y *= (1+p);
+//     }
+//     printf("%10.6f  %11.6f\n",x,y);
+//     p = 1;
+//     y = 1;
+// }
+
+// 4.25. Саставити програм којим се за све углове од 0 до 90 степени са кораком промене
+// (дефинисаним у степенима) израчунава и исписује вредност синусне функције. Функција sin као
+// улазни параметар захтева угао у радијанима.
+
+// double dx,ugaoS,ugaoR,p;
+// dx=0;
+// printf("unesite korak u stepenima: ");
+// scanf("%lf",&dx);
+
+// for(ugaoS = 0; ugaoS <= 90; ugaoS+=dx){
+//     ugaoR =(ugaoS*PI) / 180;
+//     p = sin(ugaoR);
+//     printf("%f \t%f\n",ugaoS,p);
+// }
+
+// 4.26. Саставити програм који за унети позитиван цео број n исцртава облик приказан на слици, на
+// слици је n=5. 
+
+// a)
+// int i,j,n;
+// printf("unesite n: ");
+// scanf("%d",&n);
+
+// for(i=1; i<=n; i++){
+//     for(j=1; j<=2*n; j++){
+//         printf("*");
+//     }
+//         printf("\n");
+// }
+
+// b)
+// int i,j,n;
+// printf("unesite n: ");
+// scanf("%d",&n);
+
+// for(i = 0; i<n; i++){
+//     for(j = 0; j<n*2; j++)
+//         printf("%d",j);
+//     printf("\n");
+// }
+
+// 4.28. Саставити програм који за унети позитиван цео број n исцртава облик приказан на слици, на
+// слици је n=5. 
+
+// int i,j,n;
+// printf("unesite broj n: ");
+// scanf("%d",&n);
+// printf("\n");
+
+// a)
+// for(i=1;i<=n;i++){
+//     for(j=1;j<=n;j++){
+//         printf("*");
+//     }
+//     printf("\n");
+// }
+// v)
+// for(i=1;i<=n;i++){
+//     for(j=1;j<=i;j++){
+//         printf("* ");
+//     }
+//     printf("\n");
+// }
+
+// prvi kolkvijum zadaci
+
+// 1)
+// int x,y;
+// printf("unesite broj x: ");
+// scanf("%d",&x);
+
+// if(x>-5 && x<10){
+//     if(x>-2 && x<=2){
+//         y = 5*pow(x,5);
+//         printf("vrednost je %d\n",y);
+//     } else if(x>3 && x<=7){
+//         y = 3*x-1;
+//         printf("vrednost je %d\n",y);
+//     } else{
+//         y = sqrt(pow(x,3) - 5);
+//        printf("vrednost je %lf\n", (double)y);
+//     }
+// }else printf("uneli ste van opsega");
+
+// 2)
+// int br,i,kg,a,b,c;
+// printf("unesite broj dzudista: ");
+// scanf("%d",&br);
+// a=0;b=0;c=0;
+// for(i=1;i<=br;i++){
+//     printf("unesite kilazu takmicara broj %d : ",i);
+//     scanf("%d",&kg);
+//     if(kg <= 50){
+//         a++;
+//     } else if(kg >= 51 && kg <= 75){
+//         b++;
+//     } else if(kg>75){
+//         c++;
+//     }
+// }
+// printf("broj takmicara u prvoj kategoriji : %d\n",a);
+// printf("broj takmicara u drugoj kategoriji : %d\n",b);
+// printf("broj takmicara u trecoj kategoriji : %d\n",c);
+
+// 3)
+double a,x,n,s,eps,clan;
+int i,znak;
+
+
+printf("unesite broj x: ");
+scanf("%lf",&x);
+printf("unesite broj a: ");
+scanf("%lf",&a);
+printf("unesite broj n: ");
+scanf("%lf",&n);
+printf("unesite broj eps: ");
+scanf("%lf",&eps);
+
+s = a*(a-1);
+znak = -1;
+
+for (i = 2; i <= n; i++) {
+    clan = znak * pow(x, i) / (i * (i-1));
+    s += clan;
+    znak = -znak;
+
+    if (fabs(clan) < eps) {
+        break;
     }
 }
-    if(n==s){
-        printf("Broj %d jeste savrsen broj\n",n);
-    }else{
-        printf("Broj %d nije savrsen broj\n",n);
-    }
 
- getchar();
+printf("suma reda je : %f",s);
+
+ getche();
  return 0;
 }
 
