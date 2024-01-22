@@ -4,8 +4,10 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
 
  #define PI 3.141592
+ #define STOP 0 
 
 int main(){ 
 
@@ -1311,35 +1313,247 @@ int main(){
 // printf("broj takmicara u trecoj kategoriji : %d\n",c);
 
 // 3)
-double a,x,n,s,eps,clan;
-int i,znak;
+// double a,x,n,s,eps,clan;
+// int i,znak;
 
 
-printf("unesite broj x: ");
-scanf("%lf",&x);
-printf("unesite broj a: ");
-scanf("%lf",&a);
-printf("unesite broj n: ");
-scanf("%lf",&n);
-printf("unesite broj eps: ");
-scanf("%lf",&eps);
+// printf("unesite broj x: ");
+// scanf("%lf",&x);
+// printf("unesite broj a: ");
+// scanf("%lf",&a);
+// printf("unesite broj n: ");
+// scanf("%lf",&n);
+// printf("unesite broj eps: ");
+// scanf("%lf",&eps);
 
-s = a*(a-1);
-znak = -1;
+// s = a*(a-1);
+// znak = -1;
 
-for (i = 2; i <= n; i++) {
-    clan = znak * pow(x, i) / (i * (i-1));
-    s += clan;
-    znak = -znak;
+// for (i = 2; i <= n; i++) {
+//     clan = znak * pow(x, i) / (i * (i-1));
+//     s += clan;
+//     znak = -znak;
 
-    if (fabs(clan) < eps) {
-        break;
-    }
-}
+//     if (fabs(clan) < eps) {
+//         break;
+//     }
+// }
 
-printf("suma reda je : %f",s);
+// printf("suma reda je : %f",s);
 
- getche();
+// 5.1. Саставити програм који ће пет пута исписати реченицу Pozdrav svima! употребом
+// WHILE петље. 
+
+// int i=1;
+// while(i<=5){
+//     printf("pozdrav svima\n");
+//     i++;
+// }
+
+// 5.2. Саставити програм који употребом WHILE петље исписује:
+// а) све бројеве прве десетице,
+// б) само парне бројеве прве десетице
+// в) све бројеве прве десетице у обрнутом редоследу. 
+
+// int i;
+// a)
+// i=1;
+// while(i<10){
+//     printf("%d",i);
+//     i++;
+// }
+// b)
+// i=2;
+// while(i<=10){
+//     printf("%d",i);
+//     i+=2;
+// }
+// c)
+// i=10;
+//  while(i<=10 & i>0){
+//  printf("%d\n", i);
+//  i--;
+//  } 
+// 5.3. Саставити програм за исписивање суме природних бројева од 1 до n. Број n се уноси са
+// тастатуре. 
+// int i,n,suma;
+// i=1;suma=0;
+// printf("unesite broj n:");
+// scanf("%d",&n);
+
+// while(i<=n){
+//     suma+=i;
+//     i++;
+// }
+// printf("%d",suma);
+
+// 5.4. Саставити програм за исписивање суме сваког трећег природног броја од 1 до n. Број n се
+// уноси са тастатуре. 
+
+// a)
+// int i=1, suma=0,n;
+
+// printf("n=");
+// scanf("%d", &n);
+// while(i<=10){
+//     suma +=i;
+//     i+=3;
+// }
+// printf("%d",suma);
+// b)
+
+//  int i, n;
+
+//     printf("n=");
+//     scanf("%d", &n);
+
+//     i = 3;
+//     while (i <= n) {
+//         printf("%d ", i);
+//         i += 3;
+//     }
+
+// 5.5. Саставити програм којим се за дати природни број n израчунава сума: ...
+// int i=1,n;
+// float s=0;
+// printf("Unesite prirodan broj n: ");
+// scanf("%d",&n);
+// while(i<=n){
+//     s+=1./pow(2*i+1,2);
+//     i++;
+// }
+// printf("%f",s);
+
+// 5.7. Саставити програм којим се:
+// а) исписује n елемената Фибоначијевог низа;
+// б) израчунава и исписује сума првих n елемената Фибоначијевог низа.
+// Фибоначијев низ: f1=1, f2=1, fi=fi-1+fi-2, i=3, 4, 5, ... 
+
+// int i=3, n, fp=1, fpp=1,fn,s=2;
+// printf("Unesite prirodan broj n: ");
+// scanf("%d",&n);
+// while(i<=n){
+//     fn=fp+fpp;
+//     s=s+fn;
+//     fpp=fp;
+//     fp=fn;
+//     i++;
+// }
+// printf("s= %d\n",s);
+
+// 5.8. Саставити програм за исписивање n-тог степена броја а. Оба броја се уносе са тастатуре. 
+// int i=1,n,a,stepen;
+// printf(" a= ");
+// scanf("%d",&a);
+// printf(" n= ");
+// scanf("%d",&n); 
+// //moj nacin
+// stepen = pow(a,n);
+// //nacin iz zbirke
+// while(i<=n)
+//  {
+//  stepen*=a;
+//  i++;
+//  } 
+
+// printf("\n Broj %d na %d-ti stepen je: %d\n",a,n,stepen); 
+
+// 5.9. Саставити програм за израчунавање средње вредности унетих реалних бројева. Користити
+// број 0 као STOP кôд за крај учитавања. 
+
+//moj nacin
+// int n=0;
+//  float x, suma=0,ar=0;
+//  printf("\n Unesite niz realnih brojeva (0 za kraj):\n\n");
+//  scanf("%f",&x); 
+//  while(x!=0){
+//     suma +=x;
+//     n++;
+//     scanf("%f",&x);
+//  }
+//     ar = suma / n;
+//  printf("suma=%.2f",suma);
+//  printf("aritmeticka sredina=%.2f",ar);
+
+//nacin iz zbirke 
+//  int n=0;
+//  float x, suma=0;
+//  printf("\n Unesite niz realnih brojeva (0 za kraj):\n\n");
+//  scanf("%f",&x);
+//  while(x!=STOP)
+//  {
+//  suma += x;
+//  n++;
+//  scanf("%f",&x);
+//  }
+//  if (n==0)
+//  printf("\n Nije zadat niz realnih brojeva.\n\n");
+//  else
+//  printf("\n Aritmeticka sredina zadatog niza je %.3f\n",suma/n); 
+
+//samo treba da se definira stop izvan main funkcije na pocetku programa 
+
+// 5.10. Саставити програм који ће учитавати један за другим низ бројева. Крај уноса означен је
+// нулом. Наћи и исписати аритметичку средину учитаних бројева узимајући у обзир само оне бројеве
+// који су већи или једнаки 2 и мањи или једнаки 6.
+
+// int i=0;
+// float x, suma=0,sredina;
+//  printf("\n Unesite niz realnih brojeva (0 za kraj):\n\n"); 
+// while(true){
+//     scanf("%f",&x);
+//     if(x==0){
+//         sredina = suma/i;
+//         printf("aritmeticka sredina: %.3f\n", sredina);
+//     }
+//     if(x>=2 && x<=6){
+//         suma+=x;
+//         i++;
+//     }
+// }
+
+// 5.11. Саставити програм који ће учитати природне бројеве m и n (m>n). Уколико услови приликом
+// уноса нису испуњени поновити учитавање. Наћи и исписати биномни коефицијент: ...
+// int i,m=0,n,brojilac=1,imenilac=1;
+
+// while(m>n){ 
+//  printf("\n Unesite m i n: ");
+//  scanf("%d%d",&m,&n);
+// }
+// for(i=m;i>m-n;i--){
+//      brojilac=brojilac*i; 
+// }
+// for(i=1;i<=n;i++)
+//  imenilac=imenilac*i;
+//  brojilac=brojilac/imenilac;
+//  printf("\n Binomni koeficijent b= %d \n ", brojilac);
+
+// 5.12. Саставити програм који ће учитати два броја m и n. Оба броја треба да буду природна. Ако
+// тај услов није испињен, учитавање треба поновити. Ако је n<m, заменити m са n. Наћи и исписати
+// суму квадратних корена свих непарних бројева од m до n. 
+
+// int m=0,n,pomocna,i;
+// float suma=0,koren;
+//  printf("\n Unesite m i n [0<m<n]: "); 
+// while(m<1 || n<1)
+// scanf("%d%d",&m,&n);
+// if(m>n){
+//     pomocna=n;
+//     n=m;
+//     m=pomocna;
+// }
+// for(i=m;i<=n;i+=2){
+//     koren = sqrt(i);
+//     suma+=koren;
+// }
+//  printf("\n Suma korena je %.3f\n", suma); 
+
+// 5.13. Саставити програм којим се за унето n рачуна сума: ...
+
+int znak=1,i=1,n;
+float suma=0;
+
+ getchar();
  return 0;
 }
 
