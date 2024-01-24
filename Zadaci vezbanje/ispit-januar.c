@@ -1577,6 +1577,44 @@ int main(){
 // 5.15. Саставити програм којим за унто х приближно рачуна сума: ...
 // Сумирање вршити до члана (укључујући и њега) који је по апсолутној вредности мањи од задатог
 // броја ерѕ. Исписати и колико је елемената сумирано.
+// int n=1,i;
+// double suma=1.0,x,eps,clan;
+// printf("x= ");
+// scanf("%lf",&x);
+// printf("eps= ");
+// scanf("%lf",&eps);
+//     clan = x;
+// while(abs(clan)>=eps){
+//     suma+=clan;
+//     clan = x;
+//     n++;
+//     for(i=2;i<=n;i++){
+//         clan = -clan*(-x/i);
+//     }
+// }
+// printf("\n S= %lf", suma);
+// printf("\n Br.elemenata= %d\n", n);
+
+// 5.16. Саставити програм којим се за унето х приближно рачуна сума: ...
+// где је а реалан број (уноси се са тастатуре). Сумирати до члана који је по апсолутној вредноси мањи
+// од задатог броја ерѕ. 
+int i;
+double suma = 1.0,x,a,eps,clan;
+printf("\n x= ");
+ scanf("%lf",&x);
+ printf("\n a= ");
+ scanf("%lf",&a);
+ printf("\n eps= ");
+ scanf("%lf",&eps); 
+
+clan=x;
+ while(fabs(clan)>=eps){
+ i++;
+ clan=clan*(a-i+1)*x/i;
+ suma=suma+clan;
+ } 
+printf("s= %lf",suma);
+
 
  getchar();
  return 0;
