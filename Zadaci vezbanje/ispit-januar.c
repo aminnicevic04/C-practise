@@ -1653,14 +1653,380 @@ int main(){
 
 // 5.19. Саставити програм који за унети природни број исписује број чије су цифре у обрнутом
 // редоследу унетог броја. 
-int broj,obrnuti=0;
-printf("unesite broj: ");
-scanf("%d",&broj);
-while(broj>0){
-    obrnuti = obrnuti*10 + broj%10;
-    broj/=10;
+// int broj,obrnuti=0;
+// printf("unesite broj: ");
+// scanf("%d",&broj);
+// while(broj>0){
+//     obrnuti = obrnuti*10 + broj%10; 
+//     broj/=10;
+// }
+//  printf("\n Obruti: %d\n", obrnuti); 
+
+// 5.20. Саставити програм којим се дати природни број раставља на просте факторе. На пример, за
+// 28 треба исписати: 2 2 7. 
+// int m,n,k;
+// printf("Unesite prirodan broj: \n");
+// scanf("%d", &n);
+
+// printf("Prosti faktori su:");
+// for(k=2;k<=m;k++){
+//     while (n%k==0)
+//     {
+//         printf("\n%d",k);
+//         n=n/k;
+//     }
+// }
+
+// 5.21. Саставити програм којим се исписују сви Питагорини бројеви а, b и c за 1 20 ≤ ≤ a ,
+// 1 20 ≤ ≤ b . Бројеви су Питагорини ако важи:...
+
+// int a,b,c,zbir;
+
+// for(a=1; a<=20;a++){
+//     for(b=1; b<=20;b++){
+//         zbir=a*a+b*b;
+//         c=1;
+//         while(c*c<=zbir){
+//             if(zbir = c*c) printf("\nA= %d   B=%d   C=%d",a,b,c);
+//             c++;
+//         }
+//     }
+// }
+
+// 1. Učitati vrednost promenljive X. Promenljivu X uvećati za apsolutnu vrednost promenljive Y bez korišćenja naredbe fabs (apsolutna vrednost).
+// int x,y,rez;
+// printf("x= ");
+// scanf("%d",&x);
+// printf("y= ");
+// scanf("%d",&y);
+
+// if(y<0){
+//     y = y * (-1);
+// }
+//     rez = x*y;
+//     printf("%d",rez);
+
+// 2.Učitati vrednosti za tri broja i ispisati najmanji od njih.
+// int x,y,z;
+// printf("x= ");
+// scanf("%d",&x);
+// printf("y= ");
+// scanf("%d",&y);
+// printf("z= ");
+// scanf("%d",&z);
+
+// if(x < y && x<y ){
+//     printf("najmanji je %d",x);
+// }else if(y<x && y<z){
+//     printf("najmanji je %d",y);
+// }else if(z<x && z<y){
+//     printf("najmanji je %d",z);
+// }
+
+// 3.	Napisati program kojim se učitava vrednost nekog broja sa tastature i ispisuje da li je on decimalan broj ili ceo broj.
+// double x;
+// printf("x= ");
+// scanf("%lf",&x);
+
+// if(x==(int)x){
+//     printf("x je cijeli broj");
+// }else printf("x nije ceo broj");
+
+// 3. Napisati program kojim se učitavaju vrednosti stranica nekog trougla i po Heronovom obrascu izračunava površina nekog trougla.
+// P= √(S(S-a)(S-b)(S-c)), gde je S poluobim trougla.
+
+// int a,b,c;
+// float s,p;
+// printf("a= ");
+// scanf("%d",&a);
+// printf("b= ");
+// scanf("%d",&b);
+// printf("c= ");
+// scanf("%d",&c);
+
+// s = (a+b+c)/2;
+// if(s != a && s!=b && s!=c){
+    
+// p=sqrt(s*(s-a)*(s-b)*(s-c));
+// printf("s = %.2f\n",s);
+// printf("p = %.2f",p);
+// } else printf("unesite ispravne brojeve jer brojevi ne smeju da budu isti kao S");
+
+// 5.	Napisati program kojim se učitavaju koordinate tačke A(xi,yi) i ispisuje da li tačka pripada pravoj y=3x+7.
+// Napomena: Ako tačka A(xi,yi) leži na pravoj y=3x+7 tada koordinate tačke zadovoljavaju jednačinu y=3x+7.
+// int x,y;
+// printf("Unesite koordinate x i y:\n");
+// scanf("%d%d",&x,&y);
+// if(y == 3*x + 7){
+//     printf("Tacka se nalazi na pravoj liniji y=3x+7");
+// }else printf("Tacka se ne nalazi na pravoj liniji y=3x+7");
+
+// 6.	Napisati program kojim se ispisuje položaj tačke A(xi,yi) u odnosu na kružnicu poluprečnika r.
+// Napomena: Tačka je na kružnici ukoliko je x2 + y2 = r2. Van kružnice je ukoliko je x2 + y2> r2, a u kružnici je ukoliko je x2 + y2< r2.
+//  int x,y,r;
+// printf("Unesite koordinate x i y:\n");
+// scanf("%d%d",&x,&y);
+// printf("unesite r = ");
+// scanf("%d",&r);
+
+// if(x*x + y*y == r*r){
+//     printf("tacka se nalazi na kruznici");
+// }else if(x*x + y*y > r*r){
+//     printf("tacka se nalazi van kruznice");
+// } else if(x*x + y*y < r*r){
+//     printf("tacka se nalazi u kruznici");
+// }
+
+// 7.	Napisati program kojim se učitavaju dužine stranica trougla a,b,c, i ispisuje da li je mtrougao pravougli, oštrougli ili tupougli.
+// Napomena: Na osnovu Pitagorinog pravila a2 + b2 = c2 koje važi za trouglove izvodimo da za oštrougle važi da je a2 + b2> c2, odnosno za tupougle da je a2 + b2< c2.
+// int a,b,c;
+// printf("a= ");
+// scanf("%d",&a);
+// printf("b= ");
+// scanf("%d",&b);
+// printf("c= ");
+// scanf("%d",&c);
+
+// if(a*a + b*b == c*c){
+//     printf("trougao je pravougli");
+// } else if(a*a + b*b > c*c){
+//     printf("trougao je ostrougli");
+// }else if(a*a + b*b < c*c){
+//     printf("trougao je tupougli");
+// }
+
+// 8.	Napisati program kojim se učitava trocifreni broj. Ako je zadnja cifra manja od 5 dodati učitanom broju 2, inače oduzeti 5.
+// int broj, poslednjaCifra;
+// printf("broj= ");
+// scanf("%d",&broj);
+// if(broj >= 100 && broj <= 999){
+//  poslednjaCifra = broj % 10;
+
+// if(poslednjaCifra < 5){
+//     broj+= 2;
+// }else {
+//     broj-= 5;
+// }
+
+// printf("%d\n",broj);
+
+// }else printf("niste uneli trocifreni broj");
+
+// 9.	Napisati program kojim se učitava sa tastature cifra. U zavisnosti od vrednosti cifre ispisati 0 – nula, 1 – jedan, 2 – dva...9 – devet.
+
+//  int cifra;
+
+//     printf("Unesite cifru (0-9): ");
+//     scanf("%d", &cifra);
+
+//     switch (cifra) {
+//         case 0:
+//             printf("0 - nula\n");
+//             break;
+//         case 1:
+//             printf("1 - jedan\n");
+//             break;
+//         case 2:
+//             printf("2 - dva\n");
+//             break;
+//         case 3:
+//             printf("3 - tri\n");
+//             break;
+//         case 4:
+//             printf("4 - četiri\n");
+//             break;
+//         case 5:
+//             printf("5 - pet\n");
+//             break;
+//         case 6:
+//             printf("6 - šest\n");
+//             break;
+//         case 7:
+//             printf("7 - sedam\n");
+//             break;
+//         case 8:
+//             printf("8 - osam\n");
+//             break;
+//         case 9:
+//             printf("9 - devet\n");
+//             break;
+//         default:
+//             printf("Niste uneli cifru iz opsega 0-9.\n");
+//     }
+// 11.	Napisati program za međusobnu razmenu vrednosti dve celobrojne primenljive bez korišćenja drugih promenljivih.
+// int a,b;
+// printf("Unesite vrednost za a: ");
+// scanf("%d", &a);
+// printf("Unesite vrednost za b: ");
+// scanf("%d", &b);
+// printf("Pocetne vrednosti: a = %d, b = %d\n", a, b);
+
+// a = a+b;
+// b = a-b;
+// a = a-b;
+
+// printf("Nove vrednosti nakon razmene: a = %d, b = %d\n", a, b);
+
+// 12.	Napisati program kojim se na osnovu unetog trocifrenog broja N formiraju trocifreni brojevi sa istim ciframa ali takvi da im srednja cifra nije manja od dve susedne (Na primer, ako se učita 139, to su brojevi 193 i 391; ako se učita 535, to su 553 i 355; za 778, to je 787...).
+// int n;
+// printf("unesite broj n: ");
+// scanf("%d",&n);
+// if(n > 99 && n<1000){
+//     int stotina = n / 100; //prvi broj (1)
+//     int desetica = (n/10) % 10; //broj u sredini(2)
+//     int jedinica = n%10; //posledji broj(3)
+
+//     int broj1 = stotina *100 + desetica*10 +jedinica;
+//     int broj2 = stotina *100 + jedinica*10 +desetica;
+
+//     printf("Formirani brojevi: %d, %d\n", broj1, broj2);
+// } else{
+//     printf("niste uneli trocifreni broj");
+// }
+//    int N, stotine, desetice, jedinice;
+
+//     printf("Unesite trocifreni broj N: ");
+//     scanf("%d", &N);
+    
+//     if (N < 100 || N > 999) {
+//         printf("Uneti broj nije trocifren.\n");
+//         return 1;  
+//     }
+    
+//     stotine = N / 100;
+//     desetice = (N / 10) % 10;
+//     jedinice = N % 10;
+
+//     if(stotine > desetice && stotine > jedinice){
+//         printf("%d%d%d",desetice,stotine,jedinice);
+//         printf("\n%d%d%d",jedinice,stotine,desetice);
+//     } else if(desetice > stotine && desetice > jedinice){
+//         printf("%d%d%d",stotine,desetice,jedinice);
+//         printf("\n%d%d%d",jedinice,desetice,stotine);
+//     } else {
+//         printf("%d%d%d",stotine,jedinice,desetice);
+//         printf("\n%d%d%d",desetice,jedinice,stotine);
+
+//     }
+
+// 14.	Horizontala i vertikala šahovske table su numerisane od 1 do 8. Ako se učitavaju parovi tačaka (a,b) i (c,d) koji označavaju dva polja gde je prvi broj u paru horizontala,a drugi vertikala, ispisati da li su polja iste boje.
+// int a,b,c,d;
+
+// printf("unesite a i b: ");
+// scanf("%d%d",&a,&b);
+// printf("unesite b i c: ");
+// scanf("%d%d",&c,&d);
+
+// if((a+b) % 2  && (c+d) % 2  ){
+//   printf("polja su iste boje");
+// }else {
+//     printf("polja nisu iste boje");
+// }
+
+// 15.	Ako se sa ulaza učitava trocifren prirodan broj n, napisati program kojim se određuje najmanji mogući trocifreni broj m od cifara broja n.
+// Primer: Ako je n=312, tada je m=123; ako je n=252, tada je m=225; ako je n=301, tada je m=103; Ako je n=200, tada je m=200.
+
+// int n,m,jedinice,desetice,stotine;
+// printf("unesite broj n: ");
+// scanf("%d",&n);
+
+// if(n > 99 && n<1000){
+
+// stotine = n / 100;
+// desetice = (n/10) % 10;
+// jedinice = n%10;
+
+// if(stotine < desetice && stotine < jedinice){
+//     if(desetice<jedinice){
+//     m = stotine*100 + desetice*10 + jedinice;
+//     printf("%d",m);
+//     } else{
+//         m = stotine*100 + jedinice*10 + desetice;
+//         printf("%d",m);
+//     }
+// } else if(desetice < stotine && desetice < jedinice){
+//     if(stotine < jedinice){
+//         m = desetice * 100 + stotine * 10 + jedinice;
+//         printf("%d",m);
+//     }else{
+//         m = desetice*100 + jedinice * 10 + stotine;
+//         printf("%d",m);
+//     }
+// } else if(jedinice<stotine && jedinice<desetice){
+//     if(stotine<desetice){
+//         m = jedinice * 100 + stotine*10 + desetice;
+//         printf("%d",m);
+//     }else {
+//         m = jedinice*100 + desetice *10 +stotine;
+//         printf("%d",m);
+//     }
+// }
+// }else printf("niste uneli trocifreni broj");
+
+// 16.	Na osnovu unete vrednosti broja x sa tastature izračunati i ispisati vrednost y.
+// y=x, ako je x=0;
+// y=x^5/5 ako je 1≤x≤7
+// y=√(x^2+1) ako je -7≤x≤-1
+// y=0 inače.
+// int x;
+// float y;
+// printf("x= ");
+// scanf("%d",&x);
+// if(x == 0){
+//     y = x;
+// } else if(x>=1 && x<=7){
+//     y = pow(x,5)/5;
+// } else if(x>=-7 && x<= -1){
+//     y = sqrt(pow(x,2)+1);
+// } else {
+//     y = 0;
+// }
+// printf("%f",y);
+// }
+
+// 19.	Napisati program kojim se za dati prirodan broj X formira broj Y sastavljen od istih cifara ali u obrnutom poretku, a zatim ispituje da li je broj X+Y potpun kvadrat.
+// int x,y=0,tempX,zbir;
+
+// while(x<0){
+// printf("Unesite prirodan broj X: ");
+// scanf("%d", &x);
+// }
+// tempX = x;
+// while(tempX > 0){
+//     y = y*10 + tempX%10;
+//     tempX /= 10;
+// }
+
+// zbir = x + y;
+// double koren = sqrt(zbir);
+
+
+// if (koren == (int)koren) {
+//     printf("Zbir X + Y je potpun kvadrat: %d\n", zbir);
+// } else {
+//     printf("Zbir X + Y nije potpun kvadrat.\n");
+// }
+
+// 20.	Napisati program kojim se za date prirodne brojeve m i n određuje suma m poslednjih cifara broja n.
+int m,n;
+ while (m <= 0 || n <= 0) {
+    printf("Unesite pozitivne vrednosti za m i n: ");
+    scanf("%u %u", &m, &n);
 }
- printf("\n Obruti: %d\n", obrnuti); 
+
+int tempN = n;
+int suma = 0;
+
+while ( m> 0 && tempN > 0){
+    suma = suma + tempN % 10;
+    tempN = tempN / 10;
+    m--;
+}
+
+printf("Suma poslednjih %d cifara broja %d je: %d\n", m, n, suma);
+
+
+
 
  getchar();
  return 0;
