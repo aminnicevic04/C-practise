@@ -1598,23 +1598,69 @@ int main(){
 // 5.16. Саставити програм којим се за унето х приближно рачуна сума: ...
 // где је а реалан број (уноси се са тастатуре). Сумирати до члана који је по апсолутној вредноси мањи
 // од задатог броја ерѕ. 
-int i;
-double suma = 1.0,x,a,eps,clan;
-printf("\n x= ");
- scanf("%lf",&x);
- printf("\n a= ");
- scanf("%lf",&a);
- printf("\n eps= ");
- scanf("%lf",&eps); 
+// int i;
+// double suma = 1.0,x,a,eps,clan;
+// printf("\n x= ");
+//  scanf("%lf",&x);
+//  printf("\n a= ");
+//  scanf("%lf",&a);
+//  printf("\n eps= ");
+//  scanf("%lf",&eps); 
 
-clan=x;
- while(fabs(clan)>=eps){
- i++;
- clan=clan*(a-i+1)*x/i;
- suma=suma+clan;
- } 
-printf("s= %lf",suma);
+// clan=x;
+//  while(fabs(clan)>=eps){
+//  i++;
+//  clan=clan*(a-i+1)*x/i;
+//  suma=suma+clan;
+//  } 
+// printf("s= %lf",suma);
 
+// 5.17. Саставити програм којим се исписује највећи заједнички делилац (NZD) бројева a и b
+// помоћу Еуклидовог алгоритма:
+// - ако је a=b, тада је NZD=a и то је крај алгоритма;
+// - ако је а≠b, тада од већег броја одузимамо мањи и враћамо се на први корак. 
+
+// int a,b;
+// printf("a= ");
+// scanf("%d",&a);
+// printf("b= ");
+// scanf("%d",&b);
+// while(a!=b){
+// if(a>b){
+//     a=a-b;
+// }else b=b-a;
+// }
+// printf("\n NZD = %d\n",a); 
+
+// 5.18. Саставити програм који испитује да ли је унети број Нивенов. Нивенов број је број који је
+// дељив са сумом својих цифара. 
+
+// int n,k,suma=0;
+// printf("n= ");
+// scanf("%d",&n);
+
+// k = n;
+// while(k > 0){
+// suma = suma + k%10;
+// k=k/suma;
+// }
+
+//  if (n % suma == 0)
+//         printf("\nBroj %d jeste Nivenov\n", n);
+//     else
+//         printf("\nBroj %d nije Nivenov\n", n);
+
+
+// 5.19. Саставити програм који за унети природни број исписује број чије су цифре у обрнутом
+// редоследу унетог броја. 
+int broj,obrnuti=0;
+printf("unesite broj: ");
+scanf("%d",&broj);
+while(broj>0){
+    obrnuti = obrnuti*10 + broj%10;
+    broj/=10;
+}
+ printf("\n Obruti: %d\n", obrnuti); 
 
  getchar();
  return 0;
