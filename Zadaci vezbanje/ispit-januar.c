@@ -8,6 +8,11 @@
 
  #define PI 3.141592
  #define STOP 0 
+ #define NIJE_PRAZNO 'a'
+ #define PRAZNO ' '
+ #define HOR_TAB '\t' 
+ #define U_RECI 1
+ #define VAN_RECI 0
 
 int main(){ 
 
@@ -2008,22 +2013,100 @@ int main(){
 // }
 
 // 20.	Napisati program kojim se za date prirodne brojeve m i n određuje suma m poslednjih cifara broja n.
-int m,n;
- while (m <= 0 || n <= 0) {
-    printf("Unesite pozitivne vrednosti za m i n: ");
-    scanf("%u %u", &m, &n);
-}
+// int m,n;
+//  while (m <= 0 || n <= 0) {
+//     printf("Unesite pozitivne vrednosti za m i n: ");
+//     scanf("%u %u", &m, &n);
+// }
 
-int tempN = n;
-int suma = 0;
+// int tempN = n;
+// int suma = 0;
 
-while ( m> 0 && tempN > 0){
-    suma = suma + tempN % 10;
-    tempN = tempN / 10;
-    m--;
-}
+// while ( m> 0 && tempN > 0){
+//     suma = suma + tempN % 10;
+//     tempN = tempN / 10;
+//     m--;
+// }
 
-printf("Suma poslednjih %d cifara broja %d je: %d\n", m, n, suma);
+// printf("Suma poslednjih %d cifara broja %d je: %d\n", m, n, suma);
+
+// 8.2. Саставити програм који:
+// а) чита са тастатуре један знак и исписује га на екрану.
+// б) чита са тастатуре неограничени број каректера све док се не учита EOF и исписује унете
+// карактере на екрану
+// int c;
+// // c=getchar();
+// // putchar(c);
+
+// // b)
+// while(c!=EOF){
+//     c=getchar();
+//     putchar(c);
+// }
+
+// 8.3. Саставити програм за:
+// а) унос текста са тастатуре све док се не унесе тачка (.) и приказује број карактера до тачке.
+// б) унос текста са тастатуре све док се не учита EOF и приказује укупан број карактера. 
+
+// a)
+// int c, n=0; 
+// //nacin prvi
+// c=getchar();
+//  while(c != '.'){
+//     c = getchar();
+//     n++;
+//  }
+//  printf("\nBroj karaktera do tačke je: %d",n); 
+
+// nacin drugi
+// int c, n = 0;
+
+// printf("Unesite tekst (unos zavrsite tackom): ");
+// while ((c = getchar()) != '.') {
+//     n++;
+// }
+
+// printf("\nBroj karaktera do tacke je: %d\n", n);
+
+// b)
+//  int c;
+//  int n = 0;
+
+// while ((c = getchar()) != EOF)
+//     n++;
+// printf("\nBroj karaktera: %d.\n", n);
+
+// 8.16. Саставити програм којим се копира улазни текст на екран уз раздвајање речи по једним
+// знаком размака. Речи су на улазу раздвојене произвољним бројем знакова размака и/или табулације.
+// Текст се завршава сигналом ЕОF. 
+
+// int c, predH_c = NIJE_PRAZNO;
+// while((c = getchar()) != EOF){
+//     if(c==HOR_TAB || c == PRAZNO){
+//         c = PRAZNO;
+//     }
+//     if(c !=  PRAZNO || predH_c != PRAZNO){
+//         putchar(c);
+//         predH_c = c;
+//     }
+// }
+
+// 8.17. Саставити програм који копира улазни текст на екран, где сваку реч приказује у једној
+// линији. Унос текста се завршава сигналом ЕОF. 
+
+// int c, pocetna = VAN_RECI;
+// while((c=getchar()) != EOF){
+//     if(c==' ' || c=='\n' || c=='\t'){
+//         if(pocetna = U_RECI){
+//             putchar('\n');
+//             pocetna = VAN_RECI;
+//         }
+//     }else{
+//         pocetna = U_RECI;
+//         putchar(c);
+//     }
+// }
+
 
 
 

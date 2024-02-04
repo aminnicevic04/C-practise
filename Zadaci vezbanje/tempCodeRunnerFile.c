@@ -1,4 +1,12 @@
-, ako je x=0;
-// y=x^5/5 ako je 1≤x≤7
-// y=√(x^2+1) ako je -7≤x≤-1
-// y=0 inače.
+t c, pocetna = VAN_RECI;
+// while((c=getchar()) != EOF){
+//     if(c==' ' || c=='\n' || c=='\t'){
+//         if(pocetna = U_RECI){
+//             putchar('\n');
+//             pocetna = VAN_RECI;
+//         }
+//     }else{
+//         pocetna = U_RECI;
+//         putchar(c);
+//     }
+// }
