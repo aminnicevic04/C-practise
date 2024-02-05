@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <math.h>
+
 #define PI 3.14
 
 int zbir(int a, int b){ //sabiranje dva broja
@@ -68,6 +70,16 @@ double Stepen(double x, double n){
     if(negativan){ //ako je bio negativan vraca inverzni rezultat
         return(1/s);
     }else return(s);
+}
+
+double Ekspon (double x, int n){
+    double ex = 1, clan  = 1;
+    int i;
+    for(i=1;i<n;i++){
+        clan *= x/1;
+        ex += clan;
+    }
+    return ex;
 }
 
 int main(){
@@ -150,6 +162,23 @@ int main(){
 
 //  s = Stepen(x,n);
 //  printf("rezultat = %.2lf",s); 
+
+// 9.23. ...
+
+// double x,ex,ext,apsgr;
+// int n;
+// printf (" x= ");
+// scanf ("%lf", &x);
+// printf (" n= ");
+// scanf ("%d", &n);
+
+// ex = Ekspon(x,n);
+// ext = exp(x);
+// apsgr = fabs(ex - ext);
+
+//  printf("\n Izracunato= %.4f", ex);
+//  printf("\n Tacno= %.4f", ext);
+//  printf("\n APSGR= %.4f", apsgr); 
 
     getchar();
     return 0;
