@@ -1,16 +1,24 @@
-t niz1[MAX],niz2[MAX],niz3[MAX];
-int i,n;
-pritnf("duzina nizova: ");
-scanf("%d",&n);
-printf("Niz1: ");
-for(i=0; i<n; i++){
-    scanf("%f", &niz1[i]);
+nt i,j,n,s,mat[MAX][MAX];
+printf(" n= ");
+scanf("%d", &n);
+for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+        scanf("%d",&mat[i][j]);
+    }
 }
-printf("Niz2: ");
-for(i=0; i<n; i++){
-    scanf("%f", &niz2[i]);
+ printf("\n Uneta matrica:\n"); 
+
+ //pravilno ispisavnje matrice
+for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+        printf(" %d",mat[i][j]);
+    }
+        printf("\n");
 }
-for(i=0; i<n; i++){
-    niz3[i]= pow(niz1[i],3) / 3 + 2*niz1[i]*niz2[i];
-    pritnf("%d",niz3[i]);
+printf("suma elemenata vrste: ");
+for(i=0; i<n;i++){
+    for(j=0;j<n;j++){
+        s+=mat[i][j];
+    }
+    printf("%d",s);
 }

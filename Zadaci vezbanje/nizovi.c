@@ -235,22 +235,46 @@ int main()
 // }
 
 // 10.35. ...
- int niz[MAX], i, n, pom;
- printf(" Broj elemenata niza: ");
- scanf("%d", &n);
- printf(" Elementi niza: ");
-for(i=0; i<n; i++){
- scanf("%d",&niz[i]); 
-}
-for(i=0; i<n-1; i++){
-    niz[i]=niz[i+1];
-niz[n-1] = pom;
-}
-printf("Novi niz: ");
-for(i=0; i<n; i++){
-    printf("%d",niz[i]);
-}
+//  int niz[MAX], i, n, pom;
+//  printf(" Broj elemenata niza: ");
+//  scanf("%d", &n);
+//  printf(" Elementi niza: ");
+// for(i=0; i<n; i++){
+//  scanf("%d",&niz[i]); 
+// }
+// for(i=0; i<n-1; i++){
+//     niz[i]=niz[i+1];
+// niz[n-1] = pom;
+// }
+// printf("Novi niz: ");
+// for(i=0; i<n; i++){
+//     printf("%d",niz[i]);
+// }
 
+// 10.38. Саставити програм који за унети низ целих бројева дужине n формира и приказује нови низ
+// који је састављен од елемената без понављања унетог низа. 
+
+// int i,j,n,a[MAX], nadjen;
+// pritnf("n= ");
+// scanf("%d",&n);
+// pritnf("unesite elemente niza: ");
+// for(i=0; i<n; i++){
+//     scanf("%d",&a[i]);
+// }
+// printf("\n Novi niz: "); 
+// for(i=0; i<n-1; i++){
+//     nadjen = 0;
+//     for(j=0; j<n; j++){
+//         if(a[i] == a[j]){
+//             nadjen = 1;
+//             break;
+//         }
+//         if(!nadjen){
+//             printf("%d",a[i]);
+//         }
+//     }
+//     printf("%d", a[n-1]);
+// }
 
 getchar();
  return 0;
