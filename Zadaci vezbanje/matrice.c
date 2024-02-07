@@ -441,37 +441,38 @@ int main()
 //  }
 
 // 11.16 matricu mxm ispisati na n-ti stepen 
-//  int i, j, m, n, k, p;
-//  int a[MAX][MAX], b[MAX][MAX], c[MAX][MAX];
-//  printf("\n Stepen n= ");
-//  scanf("%d",&n);
-//  printf(" Dimanzija m= ");
-//  scanf("%d",&m);
+ int i, j, m, n, k, p;
+ int a[MAX][MAX], b[MAX][MAX], c[MAX][MAX];
+ printf("\n Stepen n= ");
+ scanf("%d",&n);
+ printf(" Dimanzija m= ");
+ scanf("%d",&m);
 
-//  printf("\n Matrica %dx%d:\n", m,m);
-//  for(i=0; i<m; i++)
-//  for(j=0; j<m; j++){
-//  scanf("%d",&a[i][j]);
-//  b[i][j]=a[i][j]; //kopiramo matricu a u matricu b
-//  } 
+ printf("\n Matrica %dx%d:\n", m,m);
+ for(i=0; i<m; i++)
+ for(j=0; j<m; j++){
+ scanf("%d",&a[i][j]);
+ b[i][j]=a[i][j]; //kopiramo matricu a u matricu b
+ } 
 
-// /*Stepenovanje matrice mnozeci je sa samom sobom n-1 puta*/
-//  for(p=1; p<n; p++){ //ovde samo ubacujemo jos jednu petlju koja vrti do n
-//     for(i=0; i<m; i++)
-//         for(j=0; j<m; j++){
-//         c[i][j]=0;
-//             for(k=0; k<m; k++)
-//             c[i][j]+=a[i][k]*b[k][j];
-//  }
+/*Stepenovanje matrice mnozeci je sa samom sobom n-1 puta*/
+ for(p=1; p<n; p++){ //ovde samo ubacujemo jos jednu petlju koja vrti do n
+    for(i=0; i<m; i++)
+        for(j=0; j<m; j++){
+        c[i][j]=0;
+            for(k=0; k<m; k++)
+            c[i][j]+=a[i][k]*b[k][j];
+ }
 
-//  printf("\n Rezultujuca matrica:\n");
-//  for(i=0; i<m; i++){
-//  for(j=0; j<m; j++)
-//  printf("%6d ",c[i][j]);
-//  printf("\n");
-//  } 
+ printf("\n Rezultujuca matrica:\n");
+ for(i=0; i<m; i++){
+ for(j=0; j<m; j++)
+ printf("%6d ",c[i][j]);
+ printf("\n");
+ } 
 
 
  getchar();
+ 
  return 0; 
 }
