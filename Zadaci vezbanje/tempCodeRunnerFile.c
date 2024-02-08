@@ -1,24 +1,8 @@
-nt i,j,n,s,mat[MAX][MAX];
-printf(" n= ");
-scanf("%d", &n);
-for(i=0;i<n;i++){
-    for(j=0;j<n;j++){
-        scanf("%d",&mat[i][j]);
-    }
-}
- printf("\n Uneta matrica:\n"); 
 
- //pravilno ispisavnje matrice
-for(i=0;i<n;i++){
-    for(j=0;j<n;j++){
-        printf(" %d",mat[i][j]);
-    }
-        printf("\n");
+
+if((dato == fopen("podaci.txt","a")) == NULL){ //prvo otbvara pa proverava da li je otvoren fajl
+    pritnf("greska pri otvaranju");
+    exit(1);
 }
-printf("suma elemenata vrste: ");
-for(i=0; i<n;i++){
-    for(j=0;j<n;j++){
-        s+=mat[i][j];
-    }
-    printf("%d",s);
-}
+fprintf(dato,"pozdrav svima"); //upisujemo u fajl
+fclose(dato); //zatvaramo fajl
